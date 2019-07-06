@@ -10,6 +10,6 @@ const Log = require('@partmenu/logger');
 
 const log = Log(module, config);
 
-log.warn('Ufff that is nasty!');
+log.warn('Ufff that is reaslly nasty!');
 
 ```
