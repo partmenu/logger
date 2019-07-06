@@ -6,7 +6,6 @@
   "types": "build/index.d.ts",
   "scripts": {
     "test:lint": "eslint src/**/*",
-    "prepublish": "npm run build",
     "build": "tsc",
     "build:watch": "npm run build && tsc --watch",
     "test": "npm run test:lint",
@@ -50,6 +49,9 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
