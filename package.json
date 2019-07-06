@@ -1,0 +1,82 @@
+{
+  "name": "@partmenu/logger",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test:lint": "eslint src/**/*",
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "build:watch": "npm run build && tsc --watch",
+    "test": "npm run test:lint",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/partmenu/logger.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/partmenu/logger",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "{src,test}/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.2",
+    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/release-notes-generator": "^7.2.1",
+    "@types/colors": "^1.2.1",
+    "@types/node": "^12.0.12",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
+    "semantic-release": "^15.13.18",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "colors": "^1.3.3",
+    "winston": "^3.2.1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": false
+    }
+  ]
+}
