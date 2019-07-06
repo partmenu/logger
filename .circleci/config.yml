@@ -38,6 +38,7 @@ workflows:
       - test_node_8
       - test_node_10
       - release:
+          context: NPM release
           filters:
             branches:
               only: master
