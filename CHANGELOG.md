@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/partmenu/logger/compare/v2.0.0...v2.1.0) (2019-08-28)
+
+
+### Features
+
+* ease typing for module ([aed160e](https://github.com/partmenu/logger/commit/aed160e))
+
 # [2.0.0](https://github.com/partmenu/logger/compare/v1.0.0...v2.0.0) (2019-07-06)
 
 
