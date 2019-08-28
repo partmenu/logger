@@ -31,7 +31,7 @@ const format = winston.format.printf((info): string => `${info.level}: ${info.me
 /**
  * Get logger object
  */
-export = (module: NodeJS.Module, config: Config): winston.Logger => {
+export = (module: any, config: Config): winston.Logger => {
   // Include filename
   const path: string = colors.grey(`${module.filename.split('/').slice(-2).join('/')}`);
   return winston.createLogger({
