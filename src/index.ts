@@ -31,6 +31,7 @@ const format = winston.format.printf((info): string => `${info.level}: ${info.me
 /**
  * Get logger object
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export = (module: any, config: Config): winston.Logger => {
   // Include filename
   const path: string = colors.grey(`${module.filename.split('/').slice(-2).join('/')}`);
