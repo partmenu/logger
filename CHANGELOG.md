@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/partmenu/logger/compare/v2.1.0...v2.2.0) (2020-01-12)
+
+
+### Features
+
+* ignore circle fo update ([2013f79](https://github.com/partmenu/logger/commit/2013f79))
+
 # [2.1.0](https://github.com/partmenu/logger/compare/v2.0.0...v2.1.0) (2019-08-28)
 
 
